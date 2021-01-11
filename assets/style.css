@@ -3,14 +3,99 @@ html, body {
     height: 100%;   
 }
 
-#score\time {
-   max-width: 90%;
-   display: flex;
-   justify-content: space-between; 
-   padding: 20px 30px;
+:root {
+    --primary-color:rgb(56, 9, 109);
+    --secondary-color: rgb(232, 108, 236); 
 }
 
-#highScores {
-    padding: 2.5px;
+h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+
+#score-time-wrapper {
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 40px 2px;
+}
+
+#HScore {
+    color:var(--secondary-color);
+    border: none;
+    background: none;
+    font-size: 100%;
     font-weight: bold;
 }
+
+#timer {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+#quizPosition{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+
+#intro {
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 7.5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+/* .hide {
+    display: none;
+} */
+
+#quizContent button{
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    padding: 7.5px 15px;
+    margin: 3px 0;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+#finished #records {
+    display: flex;
+    align-items: center;
+}
+
+#finished #records input, #finished #records button {
+    margin-left: 10px;
+}
+
+#finished p {
+    font-weight: bold;
+}
+
+#highScores h1 {
+    margin-left: 10px;
+}
+
+#highScores button {
+    margin-left: 10px;
+}
+
