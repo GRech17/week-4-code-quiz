@@ -1,5 +1,5 @@
 html, body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     height: 100%;   
 }
 
@@ -50,6 +50,10 @@ section {
 #intro {
     text-align: center;
     font-weight: bold;
+}
+
+#intro p {
+    font-size: 100%;
 }
 
 button {
