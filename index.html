@@ -9,15 +9,56 @@
     <script src="assets/script.js"></script>
 </head>
 
-<header id="score/time-wrapper">
-    <div id="score/time">
+<body>
+<header id="score\time-wrapper">
+    <div id="score\time">
         <button id="HScore" href="">View high scores</button>
         <div id="timer">Time: <span id="time">0</span></div>
     </div>
 </header>
 
 
+<main id="quizPosition">
+    <section id="intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit.
+                Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+        </p>
+        <button>Start Quiz</button>
+    </section>
+
+    <section id="quizContent" class="hide">
+        <p id="title"></p>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <div id="scoreLabel" class="hidden">
+         <p>&nbsp;</p>
+        </div>
+    </section>
+
+    <section id="finished" class="hide">
+        <h1>All Done</h1>
+        <p>Your final score is &nbsp;<span id="score"></span></p>
+        <div id="records">
+            <p>Enter initials: </p><input id="initials" type="text"><button>Submit</button>
+        </div>
+        <div id="errorLabel" class="hidden">
+            <p>&nbsp;</p>
+        </div>
+    </section>
+
+    <section id="highScores" class="hide">
+        <h1>High scores</h1>
+        <div>
+
+        </div>
+        <button id="reset">Go back</button><button id="clearScores">Clear high scores</button>
+    </section>
+</main>
 
 
 
+</body>
 </html>

@@ -1,0 +1,16 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;   
+}
+
+#score\time {
+   max-width: 90%;
+   display: flex;
+   justify-content: space-between; 
+   padding: 20px 30px;
+}
+
+#highScores {
+    padding: 2.5px;
+    font-weight: bold;
+}
