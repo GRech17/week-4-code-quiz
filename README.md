@@ -1,6 +1,7 @@
 # Week 4's Web APIs Challenge: Code Quiz
 
 # Working URL
+https://grech17.github.io/week-4-creating-code-quiz/
 
 ## Required
  Build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code
@@ -26,4 +27,4 @@ WHEN the game is over
 THEN I can save my initials and score
 ```
 ## Mock-Up of design and questions
-https://courses.bootcampspot.com/courses/469/files/359471/preview
+<img src="assets/04-web-apis-homework-demo.gif" alt="design preview">
