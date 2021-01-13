@@ -14,28 +14,28 @@ let answers = document.querySelectorAll('#quizContent button');
 let questions = [
     {
       title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts"
+      choices: ["Strings", "Booleans", "Alerts", "Numbers"],
+      answer: "Alerts"
     },
     {
       title: "The condition in an if / else statement is enclosed within _____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
+      choices: ["Quotes", "Curly brackets", "Parenthesis", "Square brackets"],
+      answer: "Parenthesis"
     },
     {
       title: "Arrays in JavaScript can be used to store _____.",
-      choices: ["numbers and strings", "other arrays", "booleans", "all the above"],
-      answer: "all of the above"
+      choices: ["Numbers and strings", "Other arrays", "Booleans", "All the above"],
+      answer: "All the above"
     },
     {
       title: "String values must be enclosed within _____ when being assinged to variables",
-      choices: ["commas", "curly brackets", "quotes", "parenthesis"],
-      answer: "quotes"
+      choices: ["Commas", "Curly brackets", "Quotes", "Parenthesis"],
+      answer: "Quotes"
     },
     {
       title: "A very useful tool used during development and debugger for printing content of the debugger is:",
-      choices: ["JavaScript", "terminal/bash",  "for loops", "console.log"],
-      answer: "console.log"
+      choices: ["JavaScript", "Terminal/bash",  "For loops", "Console.log"],
+      answer: "Console.log"
     },
   ];
 
@@ -145,9 +145,7 @@ let scoreLabel = () => {
 }
 
 
-//////////////////// QUIZ CONTROLS ////////////////////
-
-// Create an array of selected divs so I can refer to them with the this keyword and replace their values to then check against the answer property for all questions.
+// Creates an answer check
 Array.from(answers).forEach(check => {
 	check.addEventListener('click', function (event) {
 		    // Handles events if a question is answered correctly
@@ -165,9 +163,7 @@ Array.from(answers).forEach(check => {
 });
 
 
-//////////////////// SCORE SUBMISSION ////////////////////
-
-// Displays error message if initials given do not meet requirements
+// Displays error message if initials do not meet requirements
 let errorLabel = () => {
 	clearTimeout(timeset);
 	timeset = setTimeout(() => {
@@ -175,25 +171,24 @@ let errorLabel = () => {
 	}, 3000);
 }
 
-// Error handling for submitting high scores
+
+// alerts of incorrect high score names
 queryElement("#records button").addEventListener("click", () => {
 	let initialsRecord = queryElement('#initials').value;
 	if (initialsRecord === ''){
-		    queryElement('#errorLabel p').innerHTML = "You need at least 1 character";
+		    queryElement('#errorLabel p').innerHTML = "You need at least 1 character.";
 		    queryElement('#errorLabel').classList.remove('hidden', errorLabel());
 	} else if (initialsRecord.match(/[[A-Za-z]/) === null) {
-		    queryElement('#errorLabel p').innerHTML = "Only letters for initials allowed.";
-		    queryElement('#errorLabel').classList.remove('hidden', errorLabel());
-	} else if (initialsRecord.length > 5) {
-		    queryElement('#errorLabel p').innerHTML = "Maximum of 5 characters allowed.";
+		    queryElement('#errorLabel p').innerHTML = "Only letters are allowed.";
 		    queryElement('#errorLabel').classList.remove('hidden', errorLabel());
 	} else {
-		//Sends value to current array for use now.
+		//Sends value to current array
 		records.push({
 			"initialRecord": initialsRecord,
 			"score": score
 		});
-		//Sends value to local storage for later use.
+        
+        //Sends value to local storage
 		localStorage.setItem('records', JSON.stringify(records));
 		queryElement('#highScores div').innerHTML = '';
 		onlyDisplaySection("#highScores");
@@ -202,8 +197,6 @@ queryElement("#records button").addEventListener("click", () => {
 	}
 });
 
-
-//////////////////// HIGH SCORE CONTROL ARRAY/LOCAL STORAGE ////////////////////
 
 // Clears highscores from the html, array and localstorage
 queryElement("#clearScores").addEventListener("click", () => {

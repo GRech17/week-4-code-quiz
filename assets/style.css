@@ -6,7 +6,16 @@ html, body {
 :root {
     --primary-color:rgb(56, 9, 109);
     --secondary-color: rgb(232, 108, 236);
-    --hover-color: rgb(98, 42, 151);
+    --hover-color: rgba(175, 51, 224, 0.904);
+    --answer-color: rgba(128, 128, 128, 0.644);
+
+}
+
+#quizPosition{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75%;
 }
 
 h1 {
@@ -34,12 +43,6 @@ h1 {
 #timer {
     font-weight: bold;
     font-size: 100%;
-}
-
-#quizPosition{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 section {
@@ -78,6 +81,10 @@ button {
     background-color: var(--hover-color);
 }
 
+#quizContent p {
+    font-size: 2.5em;
+    font-weight: bold;
+}
 
 #quizContent button{
     background-color: var(--primary-color);
@@ -112,3 +119,55 @@ button {
     margin-left: 10px;
 }
 
+#scoreLabel, #errorLabel {
+    border-top: 1px solid var(--answer-color);
+    color: var(--answer-color);
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 600;
+    margin: 15px auto;
+}
+
+#scoreLabel p, #errorLabel p {
+    margin-top: 3px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#highScores div div:nth-child(odd) {
+    background-color: var(--answer-color);
+}
+
+#highScores div div {
+    padding: 7.5px;
+    font-weight: bold;
+}
+
+#highScores button {
+    margin: 5px 2px;
+}
+
+@media only screens and (min-width: 768px) {
+    #quizPosition {
+        min-height: calc(100% - 82px)
+    }
+
+    #finished #records {
+        display: flex;
+        align-items: center;
+    }
+
+    #fnished #records input, #finished #records button{
+        margin-left:10px;
+    }
+
+    #score-time-Wrapper {
+        flex-direction: row;
+    }
+
+    #quizContent {
+        min-width:420px;
+    }
+}
