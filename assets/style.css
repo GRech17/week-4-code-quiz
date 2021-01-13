@@ -5,7 +5,8 @@ html, body {
 
 :root {
     --primary-color:rgb(56, 9, 109);
-    --secondary-color: rgb(232, 108, 236); 
+    --secondary-color: rgb(232, 108, 236);
+    --hover-color: rgb(98, 42, 151);
 }
 
 h1 {
@@ -55,6 +56,9 @@ section {
 #intro p {
     font-size: 100%;
 }
+button:hover {
+    background-color: var(--hover-color);
+}
 
 button {
     background-color: var(--primary-color);
@@ -66,9 +70,14 @@ button {
     font-size: 100%;
 }
 
-/* .hide {
+.hide {
     display: none;
-} */
+}
+
+#quizContent button:hover{
+    background-color: var(--hover-color);
+}
+
 
 #quizContent button{
     background-color: var(--primary-color);
